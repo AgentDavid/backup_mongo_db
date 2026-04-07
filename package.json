@@ -1,0 +1,30 @@
+{
+  "name": "backup_mongo_db",
+  "version": "1.0.0",
+  "description": "Daily MongoDB backup scheduler – creates a full backup every morning and keeps only the last 3 backups.",
+  "main": "index.js",
+  "bin": {
+    "mongo-backup": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "backup:now": "node index.js --now",
+    "test": "node --test src/backup.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AgentDavid/backup_mongo_db.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AgentDavid/backup_mongo_db/issues"
+  },
+  "homepage": "https://github.com/AgentDavid/backup_mongo_db#readme",
+  "dependencies": {
+    "dotenv": "^17.4.1",
+    "node-cron": "^4.2.1"
+  }
+}
